@@ -9,16 +9,12 @@
         <version>2.3.3.RELEASE</version>
     </parent>
 
-    <groupId>com.tim.tools</groupId>
+    <groupId>com.github.tim-tools</groupId>
     <artifactId>flink-boot-parent</artifactId>
     <version>1.0.0.RELEASE</version>
     <name>flink-boot-parent</name>
     <packaging>pom</packaging>
     <description>Flink Spring Boot Parent</description>
-
-    <modules>
-        <module>flink-boot-starter</module>
-    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -33,7 +29,7 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.tim.tools</groupId>
+                <groupId>com.github.tim-tools</groupId>
                 <artifactId>flink-boot-starter</artifactId>
                 <version>1.0.0.RELEASE</version>
             </dependency>
@@ -162,7 +158,74 @@
                         </execution>
                     </executions>
                 </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>2.2.1</version>
+                    <executions>
+                        <execution>
+                            <id>attach-sources</id>
+                            <goals>
+                                <goal>jar-no-fork</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>2.9.1</version>
+                    <executions>
+                        <execution>
+                            <id>attach-javadocs</id>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-gpg-plugin</artifactId>
+                    <version>1.5</version>
+                    <executions>
+                        <execution>
+                            <id>sign-artifacts</id>
+                            <phase>verify</phase>
+                            <goals>
+                                <goal>sign</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
+
+    <scm>
+        <connection>scm:git:git://github.com/tim-tools/flink-boot-parent.git</connection>
+        <developerConnection>scm:git:ssh//github.com/tim-tools/flink-boot-parent.git</developerConnection>
+        <url>https://github.com/tim-tools/flink-boot-parent</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>tim.wong</name>
+            <email>timwong@yeah.net</email>
+        </developer>
+    </developers>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+    </distributionManagement>
 </project>
