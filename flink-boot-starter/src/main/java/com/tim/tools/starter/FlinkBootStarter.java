@@ -24,7 +24,9 @@ public class FlinkBootStarter {
         initInputVariable(args);
         FlinkApplication flinkApplication = initFlinkApplication();
         ApplicationContext applicationContext = SpringApplication.run(flinkApplication.getClass(), args);
-        flinkApplication.setBootContext(applicationContext);
+        FlinkBootContext flinkBootContext = FlinkBootContext.getInstance();
+        flinkBootContext.setContext(applicationContext);
+        flinkApplication.setBootContext(flinkBootContext);
         flinkApplication.main(args);
     }
 

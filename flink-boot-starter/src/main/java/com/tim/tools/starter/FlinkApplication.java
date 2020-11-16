@@ -1,6 +1,5 @@
 package com.tim.tools.starter;
 
-import org.springframework.context.ApplicationContext;
 
 /**
  * @author TimWong
@@ -10,5 +9,6 @@ public interface FlinkApplication {
 
     void main(String[] args) throws Exception;
 
-    void setBootContext(ApplicationContext applicationContext);
+    default void setBootContext(FlinkBootContext bootContext) {
+    }
 }
