@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.tim.tools</groupId>
+        <artifactId>flink-boot-parent</artifactId>
+        <version>1.0.0.RELEASE</version>
+    </parent>
+
+    <groupId>com.tim.demo</groupId>
+    <artifactId>flink-boot-demo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>flink-boot-demo</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.tim.tools</groupId>
+            <artifactId>flink-boot-starter</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

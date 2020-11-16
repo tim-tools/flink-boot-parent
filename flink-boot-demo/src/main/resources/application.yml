@@ -1,0 +1,8 @@
+test:
+  name: default
+  value: tim
+  items:
+    - key: first
+      order: 1
+    - key: second
+      order: 2
