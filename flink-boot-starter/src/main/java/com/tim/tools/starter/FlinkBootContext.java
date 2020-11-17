@@ -10,10 +10,6 @@ import org.springframework.core.ResolvableType;
 import java.lang.annotation.Annotation;
 import java.util.Map;
 
-/**
- * @author TimWong
- * @date 2020/11/16 22:55:06
- */
 public class FlinkBootContext implements ListableBeanFactory {
 
     private ApplicationContext context;

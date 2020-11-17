@@ -8,17 +8,13 @@ import java.util.ServiceLoader;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * @author TimWong
- * @date 2020/11/16 11:03:34
- */
 public class FlinkBootStarter {
 
     /**
      * Flink Application Main Method
      *
      * @param args input arguments
-     * @throws Exception
+     * @throws Exception init exception
      */
     public static void main(String[] args) throws Exception {
         initInputVariable(args);
