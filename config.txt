@@ -1,0 +1,20 @@
+---------------- keyword-----------------------
+#@
+#compact
+#date
+#define
+#dsl
+#end
+#escape
+#for
+#if
+#include
+#namespace
+#number
+#render
+#set
+#strip
+
+-------------- line comment ----------------------
+###
+#-- --#
